@@ -1,0 +1,14 @@
+{
+  "name": "lcars47-chat",
+  "version": "0.0.1",
+  "description": "LCARS47 Chat",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/overdrivemachines/lcars47.git"
+  },
+  "license": "MIT License",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.1.1"
+  }
+}
