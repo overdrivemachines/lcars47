@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LCARS47 Master Controller</title>
+  <link rel="stylesheet" type="text/css" href="https://codepen.io/overdrivemachines/pen/dqXbVO.css">
+</head>
+<body>
+  <section>
+    <object id="flash" width="800" height="450" data="warpcore5.swf"></object>
+    <p>
+      <button type="button" class="btn btn-primary">Flash</button>
+    </p>
+  </section>
+  
+  
+  
+
+  <form id="form1" name="form1" method="post" action="">
+  <input type="button" name="sendToFlash" id="sendToFlash" value="Call Flash" class="btn btn-primary" onclick="callFlash('Test');" />
+  </form>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script type="text/javascript">
+    function callFlash(val)
+      {
+        //document.getElementById('flash').SetVariable("testValue", val);
+        //document.getElementById('flash').GotoFrame(55);
+        document.getElementById('flash').TGotoLabel("/", "FF");
+      }
+
+      function function1(val)
+      {
+
+        console.log(val);
+      }
+
+      function displayAlert(message)
+      {
+        window.alert(message);
+      }
+  </script>
+</body>
+</html>
