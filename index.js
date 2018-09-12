@@ -6,6 +6,14 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/index2.html', function(req, res){
+  res.sendFile(__dirname + '/index2.html');
+});
+
+app.get('/warpcore5.swf', function(req, res){
+  res.sendFile(__dirname + '/warpcore5.swf');
+});
+
 io.on('connection', function(socket){
   var randomNumber = Math.floor(Math.random() * 255);
   var userName = 'User' + randomNumber
