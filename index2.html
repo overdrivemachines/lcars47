@@ -8,31 +8,38 @@
   <section>
     <object id="flash" width="800" height="450" data="warpcore5.swf"></object>
     <p>
-      <button type="button" class="btn btn-primary">Flash</button>
+      <span id="badge_clicked_button_id" class="badge badge-primary">Clicked Button ID</span>
+    </p>
+    <p>
+      <button id="btn-flash" type="button" class="btn btn-primary">Flash</button>
     </p>
   </section>
-  
-  
-  
-
-  <form id="form1" name="form1" method="post" action="">
-  <input type="button" name="sendToFlash" id="sendToFlash" value="Call Flash" class="btn btn-primary" onclick="callFlash('Test');" />
-  </form>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+    $(function () {
+      // Ready function
+    });
+
+    $("#btn-flash").click(function() {
+      // document.getElementById('flash').TGotoLabel("/", "FF");
+      $("#flash").get(0).TGotoLabel("/", "FF");
+    });
+
+    var socket = io();
+    function function1(val)
+      {
+        $("#badge_clicked_button_id").text(val);
+        socket.emit('chat message', val);
+        return false;
+      }
+    </script>
   <script type="text/javascript">
     function callFlash(val)
       {
         //document.getElementById('flash').SetVariable("testValue", val);
         //document.getElementById('flash').GotoFrame(55);
-        document.getElementById('flash').TGotoLabel("/", "FF");
-      }
-
-      function function1(val)
-      {
-
-        console.log(val);
       }
 
       function displayAlert(message)
